@@ -1,0 +1,48 @@
+<form [formGroup]="productForm" (ngSubmit)="submit()" class="row justify-content-md-center">
+  <!-- Modal Header -->
+  <div class="modal-header">
+    <h4 class="modal-title">Create Product</h4>
+  </div>
+
+  <!-- Modal body -->
+  <div class="col-md-6">
+    <div class="form-control-row">
+      <label for="example-email-input" class="col-md-4 col-form-label">ID:</label>
+      <div class="col-md-12">
+        <input type="text" class="form-control" id="example-email-input" formControlName="id">
+      </div>
+    </div>
+
+    <div class="form-control-row">
+      <label for="example-email-input" class="col-md-4 col-form-label">Name:</label>
+      <div class="col-md-12">
+        <input type="text" class="form-control" id="example-name-input" formControlName="name">
+      </div>
+    </div>
+
+
+    <div class="form-control-row">
+      <label for="example-email-input" class="col-md-4 col-form-label">Price:</label>
+      <div class="col-md-12">
+        <input type="text" class="form-control" id="example-price-input" formControlName="price">
+      </div>
+    </div>
+
+
+    <div class="form-control-row">
+      <label for="example-email-input" class="col-md-4 col-form-label">Description:</label>
+      <div class="col-md-12">
+        <input type="text" class="form-control" id="example-description-input" formControlName="description">
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" [disabled]="productForm.invalid" (click)="submit()" class="btn btn-success"
+              data-dismiss="modal">Create
+      </button>
+      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+    </div>
+
+  </div>
+</form>
+
