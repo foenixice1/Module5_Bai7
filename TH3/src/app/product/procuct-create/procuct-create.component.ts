@@ -31,7 +31,7 @@ export class ProcuctCreateComponent implements OnInit {
     this.goHome();
   }
   goHome() {
-    this.router.navigate(['product/list'])
+    this.router.navigate(['product'])
   }
 
 }

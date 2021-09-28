@@ -1,15 +1,10 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {ProcuctListComponent} from "./product/procuct-list/procuct-list.component";
-import {ProcuctCreateComponent} from "./product/procuct-create/procuct-create.component";
 
 
 const routes: Routes = [{
-  path: 'product/list',
-  component: ProcuctListComponent
-}, {
-  path: 'product/create',
-  component: ProcuctCreateComponent
+  path: 'product',
+  loadChildren: ()=> import('./product/product.module').then(module => module.ProductModule)
 }];
 
 @NgModule({
